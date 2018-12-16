@@ -1,8 +1,6 @@
 module.exports = {
     watch: true,
     entry: {
-        './dist/worker.js': './src/worker.js',
-        './dist/index.js': './src/index.js',
         './public/dist/app.js': './public/src/app.js'
     },
     output: {

@@ -34,11 +34,12 @@ Not all the axios features are available due to limitation in the service worker
 
 1. [Install](#readme-install)
 2. [Get Started](#readme-get-started)
-3. [Available features](#readme-features)
-4. [Browsers support](#readme-browsers-support)
-5. [Contribute](#readme-contribute)
-6. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
-7. [Licence](#readme-license)
+3. [Requirements](#readme-requirements)
+4. [Available features](#readme-features)
+5. [Browsers support](#readme-browsers-support)
+6. [Contribute](#readme-contribute)
+7. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
+8. [Licence](#readme-license)
 
 <a name="readme-install"></a>
 ## Install
@@ -57,6 +58,28 @@ axios.get('...', {
 }).then((response) => {
 	// do something with the response
 })
+```
+
+<a id="readme-requirements"></a>
+## Requirements
+
+In order to work, you need to install the webpack [worker-loader](https://github.com/webpack-contrib/worker-loader) with the config as bellow:
+
+```js
+// ...
+rules: [
+	// ...
+	{
+		test: /\.worker\.js$/,
+		use: {
+			loader: 'worker-loader',
+			options: {
+				inline: true,
+				fallback: false
+			}
+		},
+	}
+]
 ```
 
 <a id="readme-features"></a>

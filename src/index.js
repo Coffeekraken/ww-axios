@@ -1,5 +1,4 @@
-import '@babel/polyfill'
 import { proxy } from 'comlinkjs'
-import Worker from './worker'
+import Worker from './axios.worker'
 const axios = proxy(new Worker())
 export default axios
