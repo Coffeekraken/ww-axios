@@ -1,5 +1,4 @@
 module.exports = {
-    watch: true,
     entry: {
         './public/dist/app.js': './public/src/app.js',
         './dist/index.js': './src/index.js'
@@ -8,7 +7,7 @@ module.exports = {
         filename: '[name]',
         path: __dirname,
         library: 'coffeekraken-ww-axios',
-        libraryTarget: 'umd'
+        libraryTarget: 'commonjs2'
     },
     module: {
       rules: [

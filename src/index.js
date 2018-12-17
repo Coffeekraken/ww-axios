@@ -1,9 +1,10 @@
-import isNode from 'detect-node'
-import { proxy } from './comlinkjs'
+import { detect } from 'detect-browser'
+import { proxy } from 'comlinkjs'
 import Worker from './axios.worker'
 
+const browser = detect()
 let axios = {}
-if (!isNode) {
+if (browser) {
     axios = proxy(new Worker())
 }
 export default axios
