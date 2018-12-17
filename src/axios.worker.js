@@ -1,5 +1,5 @@
 import '@babel/polyfill'
-import { expose, proxyValue } from 'comlinkjs'
+import { expose, proxyValue } from './comlinkjs'
 import axios from 'axios'
 
 const a = function() {

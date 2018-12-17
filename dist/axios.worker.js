@@ -2,7 +2,7 @@
 
 require("@babel/polyfill");
 
-var _comlinkjs = require("comlinkjs");
+var _comlinkjs = require("./comlinkjs");
 
 var _axios = _interopRequireDefault(require("axios"));
 
