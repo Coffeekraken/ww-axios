@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import axios from '../../src/index'
 
 axios.get('https://randomuser.me/api/').then((response) => {
