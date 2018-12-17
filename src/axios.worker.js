@@ -1,9 +1,10 @@
 import '@babel/polyfill'
 import { expose, proxyValue } from 'comlinkjs'
 import axios from 'axios'
-import isNode from 'detect-node'
+import { detect } from 'detect-browser'
 
-if (!isNode) {
+const browser = detect()
+if (browser) {
     const a = function() {
         axios.apply(this, arguments).then((response) => {
             return JSON.parse(JSON.stringify(response))
