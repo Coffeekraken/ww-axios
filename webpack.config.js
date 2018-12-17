@@ -1,11 +1,14 @@
 module.exports = {
     watch: true,
     entry: {
-        './public/dist/app.js': './public/src/app.js'
+        './public/dist/app.js': './public/src/app.js',
+        './dist/index.js': './src/index.js'
     },
     output: {
         filename: '[name]',
-        path: __dirname
+        path: __dirname,
+        library: 'coffeekraken-ww-axios',
+        libraryTarget: 'umd'
     },
     module: {
       rules: [
