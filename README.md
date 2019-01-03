@@ -27,8 +27,8 @@
 	</a>
 </p>
 
-Expose axios through a web worker.
-Not all the axios features are available due to limitation in the service worker postMessage api.
+<p class="lead">Expose axios through a web worker.
+Not all the axios features are available due to limitation in the service worker postMessage api.</p>
 
 ## Table of content
 
